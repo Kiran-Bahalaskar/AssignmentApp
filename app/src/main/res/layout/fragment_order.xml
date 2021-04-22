@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.FragmentOrder">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerviewCategory"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+
+        app:layout_constraintTop_toBottomOf="@id/recyclerviewCategory">
+
+        <LinearLayout
+            android:id="@+id/foodView1"
+            android:layout_width="0dp"
+            android:layout_height="230dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/food_bg_1"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toStartOf="@id/foodView2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingStart="10dp"
+                android:text="italian"
+                android:textColor="@color/white"
+                android:textSize="40dp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="10dp"
+                android:text="thursdays"
+                android:textColor="@color/white"
+                android:textSize="25dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="10dp"
+                android:text="bon appetit!"
+                android:textColor="@color/white"
+                android:textSize="16dp" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="10dp"
+                    android:background="@drawable/btn_cirlce_bg">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="10dp"
+                        android:src="@drawable/ic_baseline_arrow_forward_24"
+                        app:tint="#F36235" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/foodView2"
+            android:layout_width="0dp"
+            android:layout_height="230dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/food_bg_2"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/foodView1"
+            app:layout_constraintTop_toTopOf="@id/foodView1">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingStart="10dp"
+                android:text="the best"
+                android:textColor="@color/white"
+                android:textSize="40dp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="10dp"
+                android:text="offers"
+                android:textColor="@color/white"
+                android:textSize="25dp" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="10dp"
+                android:text="at the best restaurants"
+                android:textColor="@color/white"
+                android:textSize="16dp" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="10dp"
+                    android:background="@drawable/btn_cirlce_bg">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="10dp"
+                        android:src="@drawable/ic_baseline_arrow_forward_24"
+                        app:tint="#303E88" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/view3"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginTop="20dp"
+        android:background="#F4EFEF"
+        app:layout_constraintTop_toBottomOf="@id/view2">
+
+
+        <ImageView
+            android:id="@+id/timer"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="20dp"
+            android:src="@drawable/ic_baseline_access_time_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/timertext1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingStart="15sp"
+            android:text="Curfew is going to start at 8 PM"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/timer"
+            app:layout_constraintTop_toTopOf="@id/timer" />
+
+
+        <TextView
+            android:id="@+id/timertext2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingStart="15sp"
+            android:text="Order early to avoid any delays in delivery"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/timer"
+            app:layout_constraintTop_toBottomOf="@id/timertext1" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/view4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintTop_toBottomOf="@id/view3">
+
+
+        <TextView
+            android:id="@+id/textfood1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Eat what makes you happy"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ImageView
+            android:id="@+id/health"
+            android:layout_marginTop="15dp"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/healthy"
+            app:layout_constraintEnd_toStartOf="@id/chicken"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textfood1" />
+
+
+        <ImageView
+            android:id="@+id/chicken"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/chicken"
+            app:layout_constraintEnd_toStartOf="@id/biryani"
+            app:layout_constraintStart_toEndOf="@id/health"
+            app:layout_constraintTop_toTopOf="@id/health" />
+
+
+        <ImageView
+            android:id="@+id/biryani"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/biryani"
+            app:layout_constraintEnd_toStartOf="@id/paneer"
+            app:layout_constraintStart_toEndOf="@id/chicken"
+            app:layout_constraintTop_toTopOf="@id/chicken" />
+
+
+        <ImageView
+            android:id="@+id/paneer"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/paneer"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/biryani"
+            app:layout_constraintTop_toTopOf="@id/biryani" />
+
+
+
+        <TextView
+            android:id="@+id/tvBookmark"
+            android:layout_marginTop="5dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Healthy"
+            android:gravity="center"
+            android:textSize="14sp"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toStartOf="@id/tvNotification"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/health"
+            app:tint="@color/black"/>
+
+        <TextView
+            android:id="@+id/tvNotification"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Chicken"
+            android:gravity="center"
+            android:textSize="14sp"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toStartOf="@id/tvSettings"
+            app:layout_constraintStart_toEndOf="@+id/tvBookmark"
+            app:layout_constraintTop_toTopOf="@+id/tvBookmark"
+            app:tint="@color/black" />
+
+        <TextView
+            android:id="@+id/tvSettings"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Biryani"
+            android:gravity="center"
+            android:textSize="14sp"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toStartOf="@id/tvPayment"
+            app:layout_constraintStart_toEndOf="@+id/tvNotification"
+            app:layout_constraintTop_toTopOf="@+id/tvNotification"
+            app:tint="@color/black" />
+
+        <TextView
+            android:id="@+id/tvPayment"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Paneer"
+            android:gravity="center"
+            android:textSize="14sp"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tvSettings"
+            app:layout_constraintTop_toTopOf="@+id/tvSettings"
+            app:tint="@color/black" />
+
+
+
+
+
+
+
+        <ImageView
+            android:id="@+id/i1"
+            android:layout_marginTop="15dp"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/fries"
+            app:layout_constraintEnd_toStartOf="@id/i2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvBookmark" />
+
+
+        <ImageView
+            android:id="@+id/i2"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/chole_bhatore"
+            app:layout_constraintEnd_toStartOf="@id/i3"
+            app:layout_constraintStart_toEndOf="@id/i1"
+            app:layout_constraintTop_toTopOf="@id/i1" />
+
+
+        <ImageView
+            android:id="@+id/i3"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/manchuriyan"
+            app:layout_constraintEnd_toStartOf="@id/i4"
+            app:layout_constraintStart_toEndOf="@id/i2"
+            app:layout_constraintTop_toTopOf="@id/i2" />
+
+
+        <ImageView
+            android:id="@+id/i4"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/pizza"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/i3"
+            app:layout_constraintTop_toTopOf="@id/i3" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            layout="@layout/mytoolbar"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <androidx.cardview.widget.CardView
+            android:layout_marginTop="5dp"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="6dp"
+            android:id="@+id/searchView_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:elevation="6dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/myToolbar">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:drawableLeft="@drawable/ic_baseline_search_24"
+                android:paddingStart="15dp"
+                android:textSize="16sp"
+                android:hint="Restaurant name, cuisine, or a dish..."
+                android:background="@null"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <fragment
+            android:id="@+id/fragment"
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:defaultNavHost="true"
+            app:navGraph="@navigation/nav_graph"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/searchView_view"
+            app:layout_constraintBottom_toTopOf="@id/bottomNavigationView"/>
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNavigationView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="6dp"
+            app:itemIconTint="@color/selector"
+            app:itemTextColor="@color/selector"
+            app:itemBackground="@drawable/bottom_nav_tab_background"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:menu="@menu/bottom_navigation_menu" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.drawerlayout.widget.DrawerLayout>

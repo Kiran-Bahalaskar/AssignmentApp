@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fragmentOrder">
+
+    <fragment
+        android:id="@+id/fragmentOrder"
+        android:name="com.kiranbahalaskar.assignmentapp.Fragments.FragmentOrder"
+        android:label="fragment_order"
+        tools:layout="@layout/fragment_order" />
+    <fragment
+        android:id="@+id/fragmentGO_OUT"
+        android:name="com.kiranbahalaskar.assignmentapp.Fragments.FragmentGO_OUT"
+        android:label="fragment_g_o__o_u_t"
+        tools:layout="@layout/fragment_g_o__o_u_t" />
+    <fragment
+        android:id="@+id/fragmentPro"
+        android:name="com.kiranbahalaskar.assignmentapp.Fragments.FragmentPro"
+        android:label="fragment_pro"
+        tools:layout="@layout/fragment_pro" />
+</navigation>
